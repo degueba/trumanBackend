@@ -1,14 +1,14 @@
 // Update with your config settings.
+const path = require('path');
+
+console.log(path.resolve(__dirname, 'src/database/db.sqlite'));
 
 module.exports = {
 
   development: {
-    client: 'pg',
+    client: 'sqlite3',
     connection: {
-      host: '127.0.0.1',
-      database: 'truman',
-      user: 'postgres',
-      password: 'postgres'
+      filename: path.resolve(__dirname, 'db.sqlite')
     },
     migrations: {
       directory: './src/database/migrations'
@@ -17,7 +17,7 @@ module.exports = {
   },
 
   staging: {
-    client: 'pg',
+    client: 'postgresql',
     connection: {
       database: 'my_db',
       user:     'username',
@@ -33,7 +33,7 @@ module.exports = {
   },
 
   production: {
-    client: 'pg',
+    client: 'postgresql',
     connection: {
       database: 'my_db',
       user:     'username',
@@ -50,22 +50,3 @@ module.exports = {
 
 };
 
-
-/**
- * Entidades:
- * 
- * ONG, CASOS (incidents)
- * 
- */
-
- /*
- * Funcionalidades:
- *
- * Login de ONG
- * Cadastro de ONG
- * Logout de ONG
- * Cadastrar novos casos
- * Deletar novos casos
- * Listar casos específicos de uma ONG
- * Entrar em contato com a ONG
- */
