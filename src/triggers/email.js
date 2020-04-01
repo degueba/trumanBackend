@@ -3,7 +3,7 @@
 const nodemailer = require("nodemailer");
 
 module.exports = {
-    async main(html, email){
+    async main(html, emailAddress){
         //let account = await nodemailer.createTestAccount();
 
         let transporter = nodemailer.createTransport({
@@ -16,8 +16,8 @@ module.exports = {
             }
         })
 
-        console.log(email);
-        
+        console.log(emailAddress);
+
         let information = await transporter.sendMail({
             from: '"Truman - Teste System"',
             to: "rbdesigner@hotmail.com, botelhodeveloper@gmail.com",

@@ -19,7 +19,10 @@ module.exports = {
         })
         
         let html = `<div>User registered. Welcome ${email}.</div>`
-        emailTrigger.main(html).catch(console.error);
+
+        console.log('Email: ', email);
+
+        emailTrigger.main(html, email).catch(console.error);
         return response.json({ 'msg': 'User created succesfully', "status": true })
     },
 
