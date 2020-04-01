@@ -30,6 +30,7 @@ module.exports = {
             question_4, // Do you like sports ? yes (60% spider man | 10% iron man | 30% black widow)
             question_5, // Do you like being a joker ? yes (70% iron man | 20% spider man | 10% black widow)
             id_user, 
+            email,
         } = request.body;
         
         let ironMan    = 0,
@@ -108,7 +109,7 @@ module.exports = {
 
         // Trigger Survey Realized
         let html = `<div>Result: ${result_avenger.nameAvenger}</div>`;
-        emailTrigger.main(html).catch(console.error);
+        emailTrigger.main(html, email).catch(console.error);
         
         return response.status(200).json({msg: 'Survey realized sucessfully!', "result": { "avenger": result_avenger.nameAvenger }})
     }

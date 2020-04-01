@@ -16,12 +16,14 @@ module.exports = {
             }
         })
 
+        console.log(email);
+        
         let information = await transporter.sendMail({
             from: '"Truman - Teste System"',
-            to: `"${email}"`,
+            to: "rbdesigner@hotmail.com, botelhodeveloper@gmail.com",
             subject: "Hello",
-            text: "Hello World?",
-            html: html ? html : "<b>Hello World</b>"
+            text: "Welcome to Truman Health!",
+            html: html ? html : "<b>Hello!</b>"
         })
 
         console.log("Email enviado: %s", information.messageId);
