@@ -107,7 +107,9 @@ module.exports = {
         });
 
         // Trigger Survey Realized
-        emailTrigger.main().catch(console.error);
+        let html = `<div>Result: ${result_avenger.nameAvenger}</div>`;
+        emailTrigger.main(html).catch(console.error);
+        
         return response.status(200).json({msg: 'Survey realized sucessfully!', "result": { "avenger": result_avenger.nameAvenger }})
     }
 }
