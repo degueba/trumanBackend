@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(routes);
 app.use(cors());
 app.get('/', (req,res) => res.send('Hello world!'));
-app.listen(48540, () => console.log('Server Running.'));
+app.listen(3333, () => console.log('Server Running.'));
 
 
 

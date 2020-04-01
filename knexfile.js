@@ -1,9 +1,8 @@
 // Update with your config settings.
 const path = require('path');
 
-console.log(path.resolve(__dirname, 'src/database/migrations'))
-module.exports = {
 
+module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
