@@ -11,7 +11,9 @@ routes.post('/users/login', UserController.login)
 
 
 const AvengerController = require('../src/controllers/AvengerController');
+//AvengerController.init();
 
+routes.get('/avengers', AvengerController.select)
 routes.post('/avengers', AvengerController.create)
 
 
