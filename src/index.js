@@ -9,7 +9,8 @@ const app = express();
 app.use(express.json());
 app.use(routes);
 app.use(cors());
-app.get('/', (req,res) => res.send('Hello world!'))
+app.get('/', (req,res) => res.send('Hello world!'));
+app.listen(48540, () => console.log('Server Running.'));
 
 
 
