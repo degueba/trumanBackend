@@ -1,7 +1,6 @@
 // Update with your config settings.
 const path = require('path');
 
-console.log(path.resolve(__dirname, 'src/database/db.sqlite'));
 
 module.exports = {
 
@@ -11,7 +10,7 @@ module.exports = {
       filename: path.resolve(__dirname, 'db.sqlite')
     },
     migrations: {
-      directory: './src/database/migrations'
+      directory: path.resolve(__dirname, 'src/database/migrations')
     },
     useNullAsDefault: true
   },
