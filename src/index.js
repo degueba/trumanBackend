@@ -3,6 +3,8 @@ const routes = require('./routes');
 const cors = require('cors');
 
 
+var port = process.env.PORT || 8080;
+
 const app = express();
 
 // use json to requests
@@ -10,7 +12,7 @@ app.use(express.json());
 app.use(routes);
 app.use(cors());
 app.get('/', (req,res) => res.send('Hello world!'));
-app.listen(3333, () => console.log('Server Running.'));
+app.listen(port, () => console.log('Server Running.'));
 
 
 
