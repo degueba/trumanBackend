@@ -25,10 +25,10 @@ module.exports = {
     async create(request, response){
         let {
             question_1, // Do you like technology ?  yes (70% iron man | 20% spider man | 10% black widow) no (black widow 70% | 20% spider man | iron an 10%)
-            question_2, // Do you consider yourself garrulous ? yes (30% iron man | 50% spider man | 20% black widow) no (black)
-            question_3, // Are you shy ? yes (80% spider man | 10% iron man | 10% black widow)
+            question_2, // Do you consider yourself outgoing ? yes (30% iron man | 50% spider man | 20% black widow) no (black)
+            question_3, // Are you introverted ? yes (80% spider man | 10% iron man | 10% black widow)
             question_4, // Do you like sports ? yes (60% spider man | 10% iron man | 30% black widow)
-            question_5, // Do you like being a joker ? yes (70% iron man | 20% spider man | 10% black widow)
+            question_5, // Do you consider yourself a comedian ? yes (70% iron man | 20% spider man | 10% black widow)
             id_user, 
             email,
         } = request.body;
